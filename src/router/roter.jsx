@@ -3,6 +3,7 @@ import {
 } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
+import AddJob from "../pages/AddJob/AddJob";
 // import MainLayout from "../Layout/MainLayout";
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
+      },
+      {
+        path: "/AddJob",
+        element: <AddJob/>,
       },
     ],
   },
