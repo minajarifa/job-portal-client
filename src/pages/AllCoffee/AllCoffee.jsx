@@ -1,7 +1,7 @@
 import { MdDelete } from "react-icons/md";
 import { MdOutlinePreview } from "react-icons/md";
 import { MdOutlineSecurityUpdateGood } from "react-icons/md";
-
+import Swal from 'sweetalert2'
 import { useState } from "react";
 
 export default function AllCoffee() {
@@ -9,21 +9,51 @@ export default function AllCoffee() {
   fetch(`http://localhost:5000/coffee`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      //   console.log(data);
       setCoffees(data);
     });
+  const handleDeleteId = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delete/${id}`,{
+            method:"DELETE"
+        })
+        .then(response=>response.json())
+        .then(data=>{
+           if(data.deletedCount===1){
+               Swal.fire({
+                 title: "Deleted!",
+                 text: "Your file has been deleted.",
+                 icon: "success",
+               });
+           }
+            
+        })
+      }
+    });
+  };
   return (
     <div>
-      <h1>All Coffee: {coffees?.length}</h1>
+      <h1 className="m-6 text-5xl text-center">
+        All Coffee: {coffees?.length}
+      </h1>
       <div className="grid grid-cols-2 gap-6 ">
         {coffees?.map((coffee) => (
           <div key={coffee?._id}>
             <div className="shadow-sm card card-side bg-base-100">
-              <figure>
+              <figure className="mr-5">
                 <img src={coffee?.photo} alt="Movie" />
               </figure>
-              <div className="bg-red-400 card-body">
-                <div className="">
+              <div className="">
+                <div className="mb-6">
                   <h2 className="card-title">{coffee?.name}</h2>
                   <p>{coffee?.details}</p>
                   <p>{coffee?.category}</p>
@@ -31,15 +61,22 @@ export default function AllCoffee() {
                   <p>{coffee?.supplier}</p>
                   <p>{coffee?.taste}</p>
                 </div>
-                <div className="grid card-actions bg-slate-500">
-                  <button className="btn btn-primary "title="view to click">
-                  <MdOutlinePreview />
-\ 
+                <div className="grid card-actions ">
+                  <button
+                    className="text-2xl btn btn-primary"
+                    title="view to click"
+                  >
+                    <MdOutlinePreview />
                   </button>
-                  <button className="btn btn-primary"><MdDelete />
-</button>
-                  <button className="btn btn-primary"><MdOutlineSecurityUpdateGood />
-</button>
+                  <button
+                    onClick={() => handleDeleteId(coffee._id)}
+                    className="text-2xl text-red-500 btn btn-primary"
+                  >
+                    <MdDelete />
+                  </button>
+                  <button className="text-2xl btn btn-primary">
+                    <MdOutlineSecurityUpdateGood />
+                  </button>
                 </div>
               </div>
             </div>
