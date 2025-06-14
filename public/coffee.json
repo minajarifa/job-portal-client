@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Ethiopian Yirgacheffe",
+    "quantity": 50,
+    "supplier": "Bean Origins Co.",
+    "taste": "Floral, Citrus, Bright",
+    "category": "Single-Origin",
+    "details": "Light roast with notes of lemon and jasmine. Grown in Sidama, Ethiopia.",
+    "photo": "https://i.ibb.co/5cHQVzZ/Rectangle-14.png"
+  },
+  {
+    "name": "Colombian Supremo",
+    "quantity": 75,
+    "supplier": "Andes Coffee Traders",
+    "taste": "Nutty, Caramel, Medium-Body",
+    "category": "Single-Origin",
+    "details": "Medium roast with balanced acidity. Sourced from Huila, Colombia.",
+    "photo": "https://i.ibb.co/SN3MHRP/16-1.png"
+  },
+  {
+    "name": "Dark Italian Espresso",
+    "quantity": 60,
+    "supplier": "Roast Masters Inc.",
+    "taste": "Bold, Smoky, Bittersweet",
+    "category": "Espresso Blend",
+    "details": "Dark roast blend with cocoa and toasted almond notes. Ideal for espresso machines.",
+    "photo": "https://i.ibb.co/cy5t5xG/15-1.png"
+  },
+  {
+    "name": "Sumatra Mandheling",
+    "quantity": 40,
+    "supplier": "Island Beans Ltd.",
+    "taste": "Earthy, Herbal, Full-Body",
+    "category": "Single-Origin",
+    "details": "Semi-washed process with low acidity. Grown in North Sumatra, Indonesia.",
+    "photo": "https://i.ibb.co/WccBJr6/13-1.png"
+  },
+  {
+    "name": "Hawaiian Kona Blend",
+    "quantity": 30,
+    "supplier": "Pacific Coffee Co.",
+    "taste": "Smooth, Sweet, Mild",
+    "category": "Blend",
+    "details": "Premium medium roast with hints of brown sugar and macadamia nut.",
+    "photo": "https://i.ibb.co/TrvVJXf/11-1.png"
+  },
+  {
+    "name": "Decaf Swiss Water",
+    "quantity": 45,
+    "supplier": "Caffeine-Free Roasters",
+    "taste": "Mellow, Chocolatey, Balanced",
+    "category": "Decaf",
+    "details": "Chemical-free decaffeination process. Medium roast with no bitterness.",
+    "photo": "https://i.ibb.co/cy5t5xG/15-1.png"
+  },
+  {
+    "name": "Cold Brew Blend",
+    "quantity": 65,
+    "supplier": "Chill Beans Co.",
+    "taste": "Sweet, Low-Acidity, Smooth",
+    "category": "Specialty",
+    "details": "Coarse-ground blend optimized for 12-hour cold steeping.",
+    "photo": "https://i.ibb.co/WccBJr6/13-1.png"
+  },
+  {
+    "name": "Vanilla Hazelnut Flavored",
+    "quantity": 55,
+    "supplier": "Aroma Infusions",
+    "taste": "Sweet, Creamy, Vanilla",
+    "category": "Flavored",
+    "details": "Medium roast with natural vanilla and hazelnut flavoring.",
+    "photo": "https://i.ibb.co/TrvVJXf/11-1.png"
+  }
+]
