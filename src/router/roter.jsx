@@ -3,8 +3,8 @@ import {
 } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
-import AddJob from "../pages/AddJob/AddJob";
-// import MainLayout from "../Layout/MainLayout";
+import AddCoffee from "../pages/AddCoffee/AddCoffee";
+import AllCoffee from "../pages/AllCoffee/AllCoffee";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,8 +16,12 @@ const router = createBrowserRouter([
         element: <Home/>,
       },
       {
-        path: "/AddJob",
-        element: <AddJob/>,
+        path: "/add-coffee",
+        element: <AddCoffee/>,
+      },
+      {
+        path: "/all-coffee",
+        element: <AllCoffee/>,
       },
     ],
   },

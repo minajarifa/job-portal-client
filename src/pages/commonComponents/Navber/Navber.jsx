@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function () {
   const navBer = <>
   <Link className="m-2" to="/">Home</Link>
-  <Link className="m-2" to="/AddJob">Add Job</Link>
-  <Link className="m-2" to="/AddJob">Add Job</Link>
+  <Link className="m-2" to="/add-coffee">Add coffee</Link>
+  <Link className="m-2" to="/all-coffee">All coffee</Link>
   <Link className="m-2" to="/AddJob">Add Job</Link>
   </>;
   return (
