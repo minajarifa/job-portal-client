@@ -1,6 +1,10 @@
+import { Children, createContext } from "react";
 
-export default function Provider() {
+export default function Provider({children}) {
+  const AuthContext = createContext(null);
   return (
-    <div>Provider</div>
-  )
+    <AuthContext.Provider>
+      {children}
+    </AuthContext.Provider>
+  );
 }
