@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { RiMenu2Line } from "react-icons/ri";
 
 export default function () {
   const navBer = <>
@@ -14,20 +14,7 @@ export default function () {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+              <RiMenu2Line className="w-5 h-5"/>
             </div>
             <ul
               tabIndex={0}
@@ -51,7 +38,7 @@ export default function () {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src="https://i.ibb.co/mrK7Sjcw/download.png"
                 />
               </div>
             </div>
