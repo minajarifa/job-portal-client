@@ -1,19 +1,35 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { data } from "react-router-dom";
+
 export default function Login() {
-    const handleLoginButton = (e) => {
+  const { signin } = useContext(AuthContext);
+  const handleLoginButton = (e) => {
     e.preventDefault();
-   const form = e.target;
-   const email = form.email.value;
-   const password = form.password.value;
-   const userInfo={email,password}
-   console.log(userInfo)
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    const userInfo = { email, password };
+    console.log(userInfo);
+    //  create User
+    signin(email, password)
+      .then((result) => {
+        console.log(result.user)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
-    <form onSubmit={handleLoginButton} className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col ">
+    <form
+      onSubmit={handleLoginButton}
+      className="min-h-screen hero bg-base-200"
+    >
+      <div className="flex-col hero-content ">
         <div className="text-center ">
-          <h1 className="text-5xl font-bold mb-5">Login now!</h1>
+          <h1 className="mb-5 text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
           <div className="card-body">
             <fieldset className="fieldset">
               <div>
@@ -37,7 +53,7 @@ export default function Login() {
                   <a className="link link-hover">Forgot password?</a>
                 </div>
               </div>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <button className="mt-4 btn btn-neutral">Login</button>
             </fieldset>
           </div>
         </div>

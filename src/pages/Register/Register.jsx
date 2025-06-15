@@ -1,24 +1,36 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 export default function Register() {
+  const {createUser}=useContext(AuthContext);
   const handleRegisterNow = (e) => {
     e.preventDefault();
-   const form = e.target;
-   const name = form.name.value;
-   const photo = form.photo.value;
-   const email = form.email.value;
-   const password = form.password.value;
-   const userInfo={name,photo,email,password}
-   console.log(userInfo)
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const userInfo = { name, photo, email, password };
+    console.log(userInfo);
+    // create user 
+    createUser(email,password)
+    .then(result=>{
+      console.log(result.user)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
   };
   return (
     <form
       onSubmit={handleRegisterNow}
-      className="hero bg-base-200 min-h-screen"
+      className="min-h-screen hero bg-base-200"
     >
-      <div className="hero-content flex-col ">
+      <div className="flex-col hero-content ">
         <div className="text-center ">
-          <h1 className="text-5xl font-bold mb-5">Register now!</h1>
+          <h1 className="mb-5 text-5xl font-bold">Register now!</h1>
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
           <div className="card-body">
             <fieldset className="fieldset">
               <div>
@@ -58,7 +70,7 @@ export default function Register() {
                   name="password"
                 />
               </div>
-              <button className="btn btn-neutral mt-4">Register</button>
+              <button className="mt-4 btn btn-neutral">Register</button>
             </fieldset>
           </div>
         </div>
