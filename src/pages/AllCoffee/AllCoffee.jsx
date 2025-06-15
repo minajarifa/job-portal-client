@@ -3,6 +3,7 @@ import { MdOutlinePreview } from "react-icons/md";
 import { MdOutlineSecurityUpdateGood } from "react-icons/md";
 import Swal from 'sweetalert2'
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function AllCoffee() {
   const [coffees, setCoffees] = useState([]);
@@ -74,9 +75,9 @@ export default function AllCoffee() {
                   >
                     <MdDelete />
                   </button>
-                  <button className="text-2xl btn btn-primary">
+                  <Link to={`/update-coffee/${coffee._id}`} className="text-2xl btn btn-primary">
                     <MdOutlineSecurityUpdateGood />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

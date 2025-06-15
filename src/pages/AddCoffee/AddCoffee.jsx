@@ -112,12 +112,11 @@ export default function AddJob() {
                 type="text"
                 className="input"
                 placeholder="photo URL"
-                photo
-                URL="photo"
+                name="photo"
               />
             </div>
             <button type="submit" className="mt-4 btn btn-neutral">
-              Login
+              save
             </button>
           </fieldset>
         </div>

@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
 import AddCoffee from "../pages/AddCoffee/AddCoffee";
 import AllCoffee from "../pages/AllCoffee/AllCoffee";
+import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/all-coffee",
         element: <AllCoffee/>,
+      },
+      {
+        path: "/update-coffee/:id",
+        element: <UpdateCoffee/>,
       },
     ],
   },
