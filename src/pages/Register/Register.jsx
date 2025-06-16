@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 export default function Register() {
-  const {createUser}=useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const handleRegisterNow = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,14 +12,15 @@ export default function Register() {
     const password = form.password.value;
     const userInfo = { name, photo, email, password };
     console.log(userInfo);
-    // create user 
-    createUser(email,password)
-    .then(result=>{
-      console.log(result.user)
-    })
-    .catch(error=>{
-      console.log(error)
-    })
+    // create user
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        // 
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <form

@@ -16,6 +16,7 @@ export default function AuthProvider({ children }) {
     setLoading(true)
     return signInWithEmailAndPassword(auth,email,password);
   }
+  
   const userInfo = {
     user,
     loading,

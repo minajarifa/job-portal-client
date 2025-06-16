@@ -11,10 +11,12 @@ export default function Login() {
     const password = form.password.value;
     const userInfo = { email, password };
     console.log(userInfo);
-    //  create User
+    //  signin User
     signin(email, password)
       .then((result) => {
-        console.log(result.user)
+        console.log(result.user);
+        // create user with mongodb
+        
       })
       .catch((error) => {
         console.log(error);
