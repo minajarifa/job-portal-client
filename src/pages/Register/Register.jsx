@@ -16,7 +16,19 @@ export default function Register() {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        // 
+        
+        // create user in mongodb
+        fetch(`http://localhost:5000/user`,{
+          method:"PUT",
+          headers:{
+            "content-type":"application/json"
+          },
+          body:JSON.stringify(userInfo)
+        })
+        .then(response=>response.json())
+        .then(data=>{
+          console.log(data)
+        })
       })
       .catch((error) => {
         console.log(error);
