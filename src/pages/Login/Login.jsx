@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { data } from "react-router-dom";
+
 
 export default function Login() {
   const { signin } = useContext(AuthContext);

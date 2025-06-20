@@ -19,7 +19,7 @@ export default function Register() {
         
         // create user in mongodb
         fetch(`http://localhost:5000/user`,{
-          method:"PUT",
+          method:"POST",
           headers:{
             "content-type":"application/json"
           },

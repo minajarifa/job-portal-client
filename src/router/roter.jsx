@@ -8,6 +8,7 @@ import AllCoffee from "../pages/AllCoffee/AllCoffee";
 import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import AllUsers from "../pages/AllUsers/AllUsers";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/all-coffee",
         element: <AllCoffee/>,
+      },
+      {
+        path: "/all-users",
+        element: <AllUsers/>,
       },
       {
         path: "/update-coffee/:id",
