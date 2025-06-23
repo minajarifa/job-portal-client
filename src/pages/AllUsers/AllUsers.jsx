@@ -3,6 +3,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { MdUpdate } from "react-icons/md";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export default function AllUsers() {
   const [users, setUsers] = useState([]);
@@ -48,10 +49,7 @@ export default function AllUsers() {
       }
     });
   };
-  // handleUpdateButton operation
-  const handleUpdateButton=(id)=>{
-    console.log(id)
-  }
+  
   return (
     <div className="my-10">
       <h1 className="mb-5 text-4xl text-center">Users : {users?.length}</h1>
@@ -137,9 +135,9 @@ export default function AllUsers() {
                                 className="text-xl"
                               />
                             </button>
-                            <button onClick={()=>handleUpdateButton(user?._id)} className="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                            <Link to={`/update-users/${user._id}`} className="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
                               <MdUpdate title="update" className="text-xl" />
-                            </button>
+                            </Link>
                           </div>
                         </td>
                       </tr>

@@ -9,6 +9,8 @@ import UpdateCoffee from "../pages/UpdateCoffee/UpdateCoffee";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import AllUsers from "../pages/AllUsers/AllUsers";
+import UpdateUser from "../pages/AllUsers/UpdateUser/UpdateUser";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,13 +29,18 @@ const router = createBrowserRouter([
         path: "/all-coffee",
         element: <AllCoffee/>,
       },
+      
+      {
+        path: "/update-coffee/:id",
+        element: <UpdateCoffee/>,
+      },
       {
         path: "/all-users",
         element: <AllUsers/>,
       },
       {
-        path: "/update-coffee/:id",
-        element: <UpdateCoffee/>,
+        path: "/update-users/:id",
+        element: <UpdateUser/>,
       },
       {
         path: "/register",

@@ -13,7 +13,7 @@ export default function () {
       <Link className="m-2" to="/all-coffee">
         All coffee
       </Link>
-      {/* <Link className="m-2" to="/AddJob">Add Job</Link> */}
+     
       <Link className="m-2" to="/all-users">
         All Users
       </Link>
