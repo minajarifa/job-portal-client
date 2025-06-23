@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function AllUsers() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/users`)
+    fetch(`https://job-portal-server-three-virid.vercel.app/users`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -29,7 +29,7 @@ export default function AllUsers() {
     }).then((result) => {
       if (result.isConfirmed) {
         // star delete
-        fetch(`http://localhost:5000/user/${id}`, {
+        fetch(`https://job-portal-server-three-virid.vercel.app/user/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",

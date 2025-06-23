@@ -18,7 +18,7 @@ export default function Register() {
         console.log(result.user);
         
         // create user in mongodb
-        fetch(`http://localhost:5000/user`,{
+        fetch(`https://job-portal-server-three-virid.vercel.app/user`,{
           method:"POST",
           headers:{
             "content-type":"application/json"

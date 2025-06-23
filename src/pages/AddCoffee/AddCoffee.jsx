@@ -20,7 +20,7 @@ export default function AddJob() {
       details,
       photo,
     };
-    fetch(`http://localhost:5000/coffee`, {
+    fetch(`https://job-portal-server-three-virid.vercel.app/coffee`, {
       method: `POST`,
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,7 @@ export default function AddJob() {
           Swal.fire("SweetAlert2 is working!");
         }
       });
-    // fetch(`http://localhost:5000/coffee`,{
+    // fetch(`https://job-portal-server-three-virid.vercel.app/coffee`,{
     //   method:'POST',
     //   headers:{
     //     "content-type":"application/json"

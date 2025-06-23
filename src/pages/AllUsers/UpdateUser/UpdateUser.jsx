@@ -7,7 +7,7 @@ export default function UpdateUser() {
   console.log(id);
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${id}`)
+    fetch(`https://job-portal-server-three-virid.vercel.app/user/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -22,19 +22,19 @@ export default function UpdateUser() {
     const email = form.email.value;
     const photo = form.photo.value;
     const newUser = { name, email, photo };
-    fetch(`http://localhost:5000/user/${id}`,{
-      method:"PUT",
-      headers:{
-        "content-type":"application/json"
+    fetch(`https://job-portal-server-three-virid.vercel.app/user/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(newUser)
+      body: JSON.stringify(newUser),
     })
-    .then(res=>res.json())
-    .then(data=>{
-      if(data.modifiedCount===1){
-        Swal.fire("Updated user successfully");
-      }
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount === 1) {
+          Swal.fire("Updated user successfully");
+        }
+      });
   };
   return (
     <div>

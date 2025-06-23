@@ -8,7 +8,7 @@ export default function UpdateCoffee() {
   const [coffee, setCoffee] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/coffee/${id}`)
+    fetch(`https://job-portal-server-three-virid.vercel.app/coffee/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setCoffee(data);
@@ -34,7 +34,7 @@ export default function UpdateCoffee() {
       details,
       photo,
     };
-    fetch(`http://localhost:5000/coffee/${id}`, {
+    fetch(`https://job-portal-server-three-virid.vercel.app/coffee/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

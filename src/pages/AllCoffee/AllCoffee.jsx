@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function AllCoffee() {
   const [coffees, setCoffees] = useState([]);
-  fetch(`http://localhost:5000/coffee`)
+  fetch(`https://job-portal-server-three-virid.vercel.app/coffee`)
     .then((response) => response.json())
     .then((data) => {
       //   console.log(data);
@@ -24,7 +24,7 @@ export default function AllCoffee() {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://job-portal-server-three-virid.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((response) => response.json())

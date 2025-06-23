@@ -13,15 +13,9 @@ export default function () {
       <Link className="m-2" to="/all-coffee">
         All coffee
       </Link>
-     
+
       <Link className="m-2" to="/all-users">
         All Users
-      </Link>
-      <Link className="m-2" to="/register">
-        Register
-      </Link>
-      <Link className="m-2" to="/login">
-        Login
       </Link>
     </>
   );
@@ -40,24 +34,38 @@ export default function () {
               {navBer}
             </ul>
           </div>
-          <a className="text-xl btn btn-ghost">daisyUI</a>
+          <a className="text-xl btn btn-ghost">Coffee House</a>
         </div>
         <div className="hidden navbar-center lg:flex">
           <ul className="px-1 menu menu-horizontal">{navBer}</ul>
         </div>
         <div className="navbar-end">
           {/*  */}
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://i.ibb.co/mrK7Sjcw/download.png"
-              />
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://i.ibb.co/mrK7Sjcw/download.png"
+                />
+              </div>
             </div>
+            <ul
+              tabIndex={0}
+              className="p-2 mt-3 shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1 w-52"
+            >
+              {/* register , login */}
+              <Link className="m-2" to="/register">
+                Register
+              </Link>
+              <Link className="m-2" to="/login">
+                Login
+              </Link>
+            </ul>
           </div>
           {/*  */}
         </div>
