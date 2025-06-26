@@ -72,7 +72,7 @@ export default function AllCoffee() {
                 </button>
                 <button
                   onClick={() => handleDeleteId(coffee._id)}
-                  className="text-2xl text-red-500 btn btn-primary"
+                  className="text-2xl text-amber-800 btn btn-primary"
                 >
                   <MdDelete />
                 </button>

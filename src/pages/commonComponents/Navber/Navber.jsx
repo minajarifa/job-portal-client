@@ -13,15 +13,14 @@ export default function () {
       <Link className="m-2" to="/all-coffee">
         All coffee
       </Link>
-
       <Link className="m-2" to="/all-users">
         All Users
       </Link>
     </>
   );
   return (
-    <div>
-      <div className="shadow-sm navbar bg-base-100">
+    <div className="font-bold">
+      <div className="shadow-sm navbar bg-amber-800 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,9 +38,9 @@ export default function () {
         <div className="hidden navbar-center lg:flex">
           <ul className="px-1 menu menu-horizontal">{navBer}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end ">
           {/*  */}
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end ">
             <div
               tabIndex={0}
               role="button"
