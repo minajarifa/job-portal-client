@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <div className="mx-20">
       <div className="">
-        <div className="fixed top-0 left-0 right-0 z-50 shadow-sm mx-14">
+        <div className="fixed top-0 left-0 right-0 z-50 mx-16 shadow-sm">
           <Navber/>
         </div>
         <div className="pt-16 ">
