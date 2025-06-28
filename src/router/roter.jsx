@@ -1,5 +1,6 @@
 import {
   createBrowserRouter,
+  Link,
 } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<MainLayout></MainLayout>,
-    errorElement:<h1>Route not found</h1>,
+    errorElement:<h1 className="mr-3 text-center mt-28">This page not found <Link to="/" className="pb-3 text-4xl font-bold text-blue-700 btn btn-dash btn-error">Home</Link></h1>,
      children: [
       {
         path: "/",
