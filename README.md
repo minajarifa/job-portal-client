@@ -1,12 +1,41 @@
-# React + Vite
+# ☕ Coffee House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Coffee House**, a stylish and responsive web application where users can explore various coffee items. This project demonstrates card-based UI, Firebase integration, CRUD operations, and more using modern frontend technologies.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔥 Firebase integration (Realtime Database / Firestore)
+- 💳 Card-based layout to display coffee products
+- ➕ Add, 📝 Edit, 🗑️ Delete operations for coffee items
+- ⚛️ Built with React
+- 🎨 Styled using HTML, CSS, and custom styling
+- ✅ User-friendly alert messages with SweetAlert2
+- 📱 Responsive design for all devices
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Firebase
+- HTML5
+- CSS3 / Tailwind (if used)
+- JavaScript (ES6+)
+- SweetAlert2
+
+## 📷 Screenshots
+
+> _Include some screenshots of your app here if available!_
+
+## 📂 Project Structure
+
+```bash
+Coffee-House/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── index.js
+│   └── firebase.config.js
+├── .env
+├── package.json
+└── README.md
