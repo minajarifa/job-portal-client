@@ -8,7 +8,7 @@ Welcome to **Coffee House**, a stylish and responsive web application where user
 
 [Server site]()
 
-[client site]()
+[client site](https://github.com/minajarifa/job-portal-client)
 ## 🚀 Features
 
 - 🔥 Firebase integration (Realtime Database / Firestore)
