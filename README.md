@@ -1,6 +1,7 @@
 # ☕ Coffee House
 
 Welcome to **Coffee House**, a stylish and responsive web application where users can explore various coffee items. This project demonstrates card-based UI, Firebase integration, CRUD operations, and more using modern frontend technologies.
+##
 
 ##Live Link
 
